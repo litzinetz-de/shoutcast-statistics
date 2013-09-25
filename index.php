@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Webradio-Statistiken</title>
+<title>Shoutcast-Statistics</title>
 <link rel="stylesheet" href="style.css">
 <script src="jquery.js" type="text/javascript"></script>
 	<script src="jquery.maskedinput.js" type="text/javascript"></script>
@@ -27,25 +27,25 @@
 	</script>
 </head>
 <body>
-<center><b>Webradio-Statistiken</b></center>
+<center><b>Shoutcast-Statistics</b></center>
 <br><br>
-Bitte w&auml;hlen Sie einen Zeitraum:
+Please choose a time range:
 <br><br>
 <form action="stat.php" method="post" name="renderform">
 <table border="0" cellspacing="1">
 	<tr>
-	<td>Von</td><td><input type="text" name="begindate" class="roinput" readonly>
+	<td>From</td><td><input type="text" name="begindate" class="roinput" readonly>
 	<a href="#"
    onClick="cal.select(document.forms['renderform'].begindate,'dateanchor','yyyy-MM-dd'); return false;"
-   name="dateanchor" id="dateanchor">w&auml;hlen...</A></td><td><input type="text" id="begintime" name="begintime" class="formstyle" size="5"> Uhr</td>
+   name="dateanchor" id="dateanchor">pick date...</A></td><td>Time: <input type="text" id="begintime" name="begintime" class="formstyle" size="5"></td>
    </tr><tr>
-   <td>Bis</td><td><input type="text" name="enddate" class="roinput" readonly>
+   <td>To</td><td><input type="text" name="enddate" class="roinput" readonly>
 	<a href="#"
    onClick="cal.select(document.forms['renderform'].enddate,'dateanchor2','yyyy-MM-dd'); return false;"
-   name="dateanchor2" id="dateanchor2">w&auml;hlen...</A></td><td><input type="text" id="endtime" name="endtime" class="formstyle" size="5"> Uhr</td>
+   name="dateanchor2" id="dateanchor2">pick date...</A></td><td>Time: <input type="text" id="endtime" name="endtime" class="formstyle" size="5"></td>
    </tr></table>
 <br><br>
-<input type="submit" value="Weiter">
+<input type="submit" value="Run">
 </form>
 </body>
 </html>
