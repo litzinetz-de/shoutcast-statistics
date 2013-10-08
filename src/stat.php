@@ -11,13 +11,8 @@ $end=mktime($raw_end_time[0],$raw_end_time[1],0,$raw_end_date[1],$raw_end_date[2
 include('graph_functions.php');
 
 $images=array();
-$sql='SELECT id FROM servers';
-$sql_q=mysql_query($sql);
-while($row=mysql_fetch_array($sql_q))
-{
-	MakeListenersGraph($row['id'],$begin,$end);
-	$images[]='srv_'.$row['id'].'.png';
-}
+MakeListenersGraph(0,$begin,$end);
+$images[]='srv_0.png';
 
 echo '<b>Statistiken von '.date('d.m.Y H:i',$begin).' bis '.date('d.m.Y H:i',$end).'</b><br><br>';
 
