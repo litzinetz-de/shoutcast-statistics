@@ -13,7 +13,7 @@ while($row=mysql_fetch_array($sql_q))
 	$data=explode('$',$readbuffer);
 	$listeners=$listeners+$data[0];
 }
-$sql='INSERT INTO plot (time,server_id,listeners) VALUES 
-('.time().',0,'.$data[0].')';
+$sql='INSERT INTO plot (time,server_id,listeners) VALUES ('.time().',0,'.$listeners.')';
 mysql_query($sql);
+$listeners=0;
 ?>
